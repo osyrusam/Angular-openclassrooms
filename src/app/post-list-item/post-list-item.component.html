@@ -1,0 +1,23 @@
+
+<li [ngClass]="{'list-group-item': true,
+'list-group-item-success': articleLike > 0,
+'list-group-item-danger': articleDislike > articleLike }">
+
+<p class="date"> <i class="fab fa-angular"></i> Article posté le {{ articleDate | date:'medium'  }} </p>
+<h1 [ngStyle]="{color: getColor()}" class="titre">{{ articleTitre }}</h1>
+<h2 class="sous-titre">{{ articleSoustire }}</h2>
+<p class="contenu">{{ articleContenu }}</p>
+
+<div class="avis">
+Vous aimez cet article ? Donnez nous votre avis.
+
+<button class="btn btn-success boutton" (click)="onLikeit()"> <p class="like"> like: {{ articleLike }} </p></button>
+
+<button class="btn btn-danger boutton" (click)="onDontlike()"> <p class="dislike"> Dislike: {{ articleDislike }} </p></button>
+</div> 
+</li>
+
+ 
+  
+   
+

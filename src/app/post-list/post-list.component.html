@@ -1,0 +1,17 @@
+
+
+    <ul class="list-group-item">
+
+        <app-post-list-item *ngFor="let article of echange"
+         [articleTitre]="article.titre"
+         [articleSoustire]="article.sousTitre"
+         [articleContenu]="article.contenu"
+         [articleDate]="article.curent_date"
+         [articleLike]="article.loveIts"
+         [articleDislike]="article.dislike" >
+    
+         </app-post-list-item>
+              
+    </ul> 
+
+    <!-- mettre sam à la place de articles -->
